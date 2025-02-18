@@ -7,10 +7,16 @@ const createGrid = () => {
 
             const div = document.createElement('div');
             div.classList.add('grid-item');
+            div.addEventListener('mouseenter', handleMouseEnter);
             gridContainer.appendChild(div);
 
         }
     }
 
 }
+
+const handleMouseEnter = (e) => { 
+    e.target.style.backgroundColor = 'black';
+}
+
 createGrid();
